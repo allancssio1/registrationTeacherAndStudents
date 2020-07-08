@@ -1,175 +1,55 @@
-@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap";
-
-:root{
-    --color-green: #50fa7b; /*variavel para reutilizar cor em css nomeada de "--color-green"*/
-    --color-rocket: #7159c1; /*cor da rocketseat*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+  --color-green: #50fa7b;
+  --color-rocket: #7159c1;
 }
 
-*{
-    margin:0;
-    padding: 0;
-    border: 0;
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
-body{
-    background: #282a36;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: white;
+body {
+  background: rgb(54, 53, 53);
+  font-family: 'Roboto', sans-serif;
 }
 
-header{
-    padding: 32px;
-    border-bottom: 1px solid #333;
-    background: rgba(0, 0, 0, 0.1);
+header {
+  padding: 32px;
+  background-color: white;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
 }
-
 .links{
-    text-align: center;
+  font-size: 20px;
 }
-
 .links a{
-    color: white;
-    font-size: 18px;
-    line-height: 28px;
-    margin: 0px 16px;
-    text-decoration: none;
+  color: #777777;
+  text-decoration: none;
+  position: relative;
+}
+.links a + a{
+  margin-left: 30px;
+}
+.links a.active{
+  font-weight: bold;
+  color: var(--color-rocket);
 }
 .links a:hover{
-    color: var(--color-green);
-    transition: color 200ms;
+  color: var(--color-rocket);
 }
-#wrapper{
-    text-align: center;
-    padding: 32px;
+.links a::after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  background-color: var(--color-rocket);
+  left: 0px;
+  bottom: -2px;
 }
-#wrapper img{
-    border-radius: 50%;
-    border: 5px solid var(--color-green);
-    margin-bottom: 32px;
-    height: 250px;
-}
-#wrapper h1{
-    font-size: 42px;
-    line-height: 60px;
-    font-weight: bold;
-}
-#wrapper h2{
-    font-size: 24px;
-    line-height: 34px;
-    font-weight: normal;
-    margin-top: 8px;
-    opacity: 0.8;
-}
-#wrapper p{
-    max-width: 500px;
-    margin: 30px auto;
-    font-size: 20px;
-    line-height: 34px;
-}
-#wrapper p a{
-    color: var(--color-green);
-}
-
-#linksFooter a{
-    border-bottom: 1px solid var(--color-green);
-}
-
-
-
-/*===CARDS===*/
-.cards{
-    width: 800px;
-    margin: 0px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-}
-.card{
-    background: var(--color-rocket);
-    display: grid;
-}
-.card-image img{
-    width: 100%;
-}
-.card-content, .card-info{
-    padding: 24px;
-}
-
-.card-info{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-}
-.card-price{
-    background-color: var(--color-rocket);
-    filter: brightness(90%);
-    padding: 5px 20px;
-    border-radius: 20px;
-    text-align: center;
-}
-
-/*===FATURED===*/
-.featured-wrapper.card-image{
-    position: relative;
-}
-.featured{
-    position: absolute;
-    top: 130px;
-    right: 5px;
-    background: #ff9944;
-    border-radius: 16px;
-    padding: 2px 8px;
-
-}
-
-/*===MODAL===*/
-.modal-overlay{
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    opacity: 0;
-    visibility: hidden;
-}
-.modal{
-    background-color: white;
-    width: 90%;
-    height: 90%;
-    margin: 5vh auto;
-    position: relative;
-}
-.modal .close-modal{
-    color: black;
-    position: absolute;
-    right: 8px;
-    top: 8px;
-    cursor: pointer;
-}
-/*===MODAL ACTIVE===*/
-.modal-overlay.active{
-    opacity: 1;
-    visibility: visible;
-}
-iframe{
-    width: 100%;
-    height: 95%;
-    position: absolute;
-    top: 5%;
-}
-
-/*===VIDEO PAGE===*/
-.video{
-    margin: 0 auto;
-    max-width: 800px;
-}
-.card-video{
-    position: relative;
-    padding-top: 60%;
-}
-.card-video iframe{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
+.links a:hover::after{
+  width: 100%;
+  transition: width 100ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }

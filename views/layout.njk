@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
     {% block head %}
-        <title>Mayk Brito</title>
+      <title>Cadastro Escolar</title>
     {% endblock %}
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="links">
-            <a href="/about">Sobre</a>
-            <a href="/portifolio"> Aulas</a>
-        </div>
+      <div class="links">
+        <a href="/" class="active">Professores</a>
+        <a href="/students" class="">Alunos</a>
+      </div>
     </header>
 
-    {% block content %}
-    
-    {% endblock %}
-</body>
+    {% block content %}{% endblock %}
+  </body>
 </html>
