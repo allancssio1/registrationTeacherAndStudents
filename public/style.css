@@ -54,6 +54,7 @@ header {
   transition: width 100ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
+
 .card{
   width: 800px;
   min-height: 400px;
@@ -64,9 +65,16 @@ header {
   box-shadow: 10px 10px 10px #494949;
   animation: up 400ms ease-in-out;
 }
+.card .avatar{
+  background: url(https://source.unsplash.com/collection/517198) center center;
+  background-repeat: repeat-x;
+  background-size: 800px;
+  animation-direction: alternate;
+  animation: moveImage 30s infinite;
+}
 .card .item{
   border-bottom: 1px solid #505050;
-  padding: 16px 0;
+  padding: 16px 0 16px 10px;
 }
 .card .item:last-child{
   border-bottom: none;
@@ -91,5 +99,17 @@ header {
   }
   to{
     opacity: 1;
+    
+  }
+}
+@keyframes moveImage{
+  0%{
+    background-position: 0%;
+  }
+  50%{
+    background-position: 100%;
+  }
+  100%{
+    background-position: 0%;
   }
 }
