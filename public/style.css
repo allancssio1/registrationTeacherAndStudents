@@ -35,17 +35,17 @@ header {
 }
 .links a.active{
   font-weight: bold;
-  color: var(--color-rocket);
+  color: var(--color-green);
 }
 .links a:hover{
-  color: var(--color-rocket);
+  color: var(--color-green);
 }
 .links a::after{
   content: "";
   width: 0%;
   height: 2px;
   position: absolute;
-  background-color: var(--color-rocket);
+  background-color: var(--color-green);
   left: 0px;
   bottom: -2px;
 }
@@ -57,6 +57,7 @@ header {
 
 .card{
   width: 800px;
+  box-sizing: border-box;
   min-height: 400px;
   background-color: white;
   margin: 48px auto;
@@ -91,6 +92,47 @@ header {
   font-size: 16px;
   font-weight: bold;
 }
+.details span{
+  font-size: 16px;
+  color: #333333;
+  font-weight: bold;
+  display: inline-block;
+  margin: 4px 8px;
+  background-color: var(--color-green);
+  padding: 2px 4px;
+  border-radius: 16px;
+}
+.details .item option, select{
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #494949;
+}
+
+/* FORM */
+input{
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #494949;
+}
+input[type='radio']{
+  width: initial;
+  margin-right: 8px;
+}
+input::placeholder{
+  font-size: 16px;
+  font-weight: normal;
+}
+button[type='submit']{
+  padding: 8px 16px;
+  margin: 8px 16px;
+  border-radius: 16px;
+  background-color: var(--color-green);
+}
+
 
 @keyframes up{
   from{

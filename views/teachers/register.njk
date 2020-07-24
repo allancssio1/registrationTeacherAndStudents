@@ -1,0 +1,48 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <form class="card" method="post" action="/teachers">
+    <article class="avatar"></article>
+
+    <article class="details">
+      <div class="item">
+        <div>Avatar URL</div>
+        <input type="url" name="avatar_url" placeholder="http://">
+      </div>
+      <div class="item">
+        <div>Nome Completo</div>
+        <input type="text" name="name" placeholder="Nome">
+      </div>
+      <div class="item">
+        <div>Data de Nascimento</div>
+        <input type="date" name="date">
+      </div>
+      <div class="item">
+        <div>Grau de Escolaridade</div>
+        <select name="level">
+          <option value="medio">Ensino Médio Completo</option>
+          <option value="superior">Ensino Superior Completo</option>
+          <option value="master">Mestrado</option>
+          <option value="doctor">Doutorado</option>
+        </select>
+      </div>
+      <div class="item">
+        <div>Tipo de aula</div>
+          <span>
+            <input type="radio" name="model" value="presential" checked>
+            Presencial
+          </span>
+          <span>
+            <input type="radio" name="model" value="distance">
+            Ensino a Distância
+          </span>
+        </div>
+      </div>
+      <div class="item">
+        <div>Area de Atuação</div>
+        <input type="text" name="area" placeholder="ex: Matemática, Física">
+      </div>
+      <button type="submit">Enviar</button>
+    </article>
+  </form>
+{% endblock content %}
