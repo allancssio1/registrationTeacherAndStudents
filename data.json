@@ -1,10 +1,24 @@
 {
   "teachers": [
-    "http://google.com",
-    "Allan",
-    "1991-01-26",
-    "medio",
-    "Matemática",
-    "presential"
+    {
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "Allan",
+      "date": 1593561600000,
+      "level": "medio",
+      "area": "portugues",
+      "create_at": 1595642160527,
+      "model": "presential"
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://facebook.com",
+      "name": "Elenice Rodrigues",
+      "date": 1593302400000,
+      "level": "medio",
+      "area": "jogador",
+      "create_at": 1595642174762,
+      "model": "presential"
+    }
   ]
 }
