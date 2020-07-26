@@ -24,6 +24,7 @@ exports.post = function (req, res){
     create_at,
     level,
     area,
+    create_at,
     model
   })
 
