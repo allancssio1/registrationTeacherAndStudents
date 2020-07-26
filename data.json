@@ -1,10 +1,14 @@
 {
   "teachers": [
-    "http://google.com",
-    "Allan",
-    "1991-01-26",
-    "medio",
-    "Matemática",
-    "presential"
+    {
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "Allan",
+      "birth": 1593388800000,
+      "create_at": 1595766003148,
+      "level": "medio",
+      "area": "ads",
+      "model": "distance"
+    }
   ]
 }

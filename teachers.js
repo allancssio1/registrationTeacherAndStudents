@@ -10,16 +10,22 @@ exports.post = function (req, res){
     }
   }
   
-  let { avatar_url, name, date, level, area, model } = req.body
+  let { avatar_url, name, birth, level, area, model } = req.body
 
-  data.teachers.push(
+  birth = Date.parse(birth)
+  const create_at = Date.now()
+  const id = Number(data.teachers.length + 1)
+
+  data.teachers.push({
+    id,
     avatar_url,
     name,
-    date,
+    birth,
+    create_at,
     level,
     area,
     model
-  )
+  })
 
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
     if (err) return res.send ('Erro no documento')
