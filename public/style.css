@@ -56,6 +56,7 @@ header {
 
 
 .card{
+  font-family: 'Roboto', sans-serif;
   width: 800px;
   box-sizing: border-box;
   min-height: 400px;
@@ -69,9 +70,14 @@ header {
 .card .avatar{
   background: url(https://source.unsplash.com/collection/517198) center center;
   background-repeat: repeat-x;
-  background-size: 800px;
+  min-width: 100%;
   animation-direction: alternate;
   animation: moveImage 30s infinite;
+}
+.card h3{
+  font-weight: bold;
+  color: var(--color-green);
+  margin: 4px 8px;
 }
 .card .item{
   border-bottom: 1px solid #505050;
@@ -109,6 +115,17 @@ header {
   font-weight: bold;
   color: #494949;
 }
+.details a{
+  text-decoration: none;
+  font-size: 16px;
+  color: #333333;
+  font-weight: bold;
+  display: inline-block;
+  margin: 8px 16px;
+  background-color: var(--color-green);
+  padding: 2px 4px;
+  border-radius: 16px;
+}
 
 /* FORM */
 input{
@@ -116,7 +133,7 @@ input{
   outline: none;
   font-size: 16px;
   font-weight: bold;
-  color: #494949;
+  color: #353535;
 }
 input[type='radio']{
   width: initial;
@@ -124,7 +141,8 @@ input[type='radio']{
 }
 input::placeholder{
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bold;
+  color: #303030;
 }
 button[type='submit']{
   padding: 8px 16px;

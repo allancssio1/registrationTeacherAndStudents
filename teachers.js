@@ -1,5 +1,45 @@
 const fs = require('fs')
 const data = require('./data.json')
+const { age, graduation, modalidad, date } = require('./utils')
+const Intl = require('intl')
+
+exports.show = function (req, res) {
+  const { id } = req.params
+  const foundTeacher = data.teachers.find(function (teacher) {
+    return id == teacher.id
+  })
+
+  if (!foundTeacher) return res.send ('teacher not found')
+
+  const teacher = {
+    ...foundTeacher,
+    age: age(foundTeacher.birth),
+    birth: Intl.DateTimeFormat('pt-BR').format(foundTeacher.birth),
+    area: foundTeacher.area.split(","),
+    level: graduation(foundTeacher.level),
+    model: modalidad(foundTeacher.model),
+    created_at: Intl.DateTimeFormat('pt-BR').format(foundTeacher.create_at)
+  }
+  return res.render('teachers/show', { teacher })
+}
+
+exports.edit = function (req,res) {
+  const { id } = req.params
+  const foundTeacher = data.teachers.find(function (teacher) {
+    return id == teacher.id
+  })
+
+  if (!foundTeacher) return res.send ('teacher not found')
+
+  const teacher = {
+    ...foundTeacher,
+    birth: date(foundTeacher.birth),
+    area: foundTeacher.area.split(","),
+    level: graduation(foundTeacher.level),
+  }
+
+  return res.render('teachers/edit', { teacher })
+}
 
 exports.post = function (req, res){
   const keys = Object.keys(req.body)
@@ -31,6 +71,6 @@ exports.post = function (req, res){
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
     if (err) return res.send ('Erro no documento')
 
-    return res.redirect('teachers/register')
+    return res.redirect('teachers')
   })
 }
