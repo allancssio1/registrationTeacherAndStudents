@@ -2,32 +2,22 @@
   "teachers": [
     {
       "id": 1,
-      "avatar_url": "http://google.com",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/58371478?s=460&u=6a28aa264426f86bd89d8e9f792a786f749e40fb&v=4",
       "name": "Allan",
       "birth": 664848000000,
-      "created_at": 1597665843506,
+      "create_at": 1598293111384,
       "level": "superior",
-      "area": "Análise e Desenvolvimento de Sistemas",
-      "model": "distance"
-    },
-    {
-      "id": 2,
-      "avatar_url": "http://www.google.com",
-      "name": "Allan Cássio",
-      "birth": 664848000000,
-      "created_at": 1597778714725,
-      "level": "master",
-      "area": "Html, JavaScript, Css, NodeJs, ReactJs",
+      "area": "Programação Web",
       "model": "presential"
     },
     {
-      "id": 3,
-      "avatar_url": "http://jatai.coom",
-      "name": "Felipe",
-      "birth": 679968000000,
-      "create_at": 1597793149852,
-      "level": "superior",
-      "area": "Administração",
+      "id": 2,
+      "avatar_url": "https://instagram.ffor13-1.fna.fbcdn.net/v/t51.2885-19/s150x150/116471743_969730080116562_9170765629185657425_n.jpg?_nc_ht=instagram.ffor13-1.fna.fbcdn.net&_nc_ohc=MD7LUsZ4ODYAX8lNtKd&oh=e191461bf7c912d5835192b10adbe09e&oe=5F689926",
+      "name": "Elenice Rodrigues",
+      "birth": 558662400000,
+      "create_at": 1598293231293,
+      "level": "medio",
+      "area": "Nutrição, Musculação",
       "model": "presential"
     }
   ]
