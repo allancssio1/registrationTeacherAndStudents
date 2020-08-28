@@ -4,6 +4,16 @@ const { age, graduation, modalidad, date } = require('./utils')
 const Intl = require('intl')
 const { prototype } = require('stream')
 
+exports.index = function (req, res){
+  let teachers = data.teachers.map((teacher) => {
+    return {
+      ...teacher,
+      area: teacher.area.split(',')
+    }
+  })
+  return res.render('teachers/index', { teachers })
+}
+
 exports.post = function (req, res){
   const keys = Object.keys(req.body)
   

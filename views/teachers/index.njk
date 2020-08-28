@@ -1,34 +1,34 @@
 {% extends "layout.njk" %}
 
 {% block content %}
-  <main class="card">
-    <article class="avatar"></article>
-
-    <article class="details">
-      <div class="item">
-        <div>Nome Completo</div>
-        <div>Allan Cássio Ferreira de Freitas</div>
-      </div>
-      <div class="item">
-        <div>Idade</div>
-        <div>29 anos</div>
-      </div>
-      <div class="item">
-        <div>Escolaridade</div>
-        <div>Médio Completo</div>
-      </div>
-      <div class="item">
-        <div>Tipo de aula</div>
-        <div>Presencial</div>
-      </div>
-      <div class="item">
-        <div>Acompanhamento</div>
-        <div>Matemática e Fisica</div>
-      </div>
-      <div class="item">
-        <div>Desde</div>
-        <div>26/01/2020</div>
-      </div>
-    </article>
+  <main class="card table-container">
+    <table width="100%">
+      
+      <thead>
+        
+        <tr>
+          <th>Nome Completo</th>
+          <th>Área de Atuação</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for teacher in teachers %}
+          <tr>
+            <td>
+              <span id="image-teacher" style="background-image: url({{teacher.avatar_url}})"></span>
+              <span id="name-teacher">{{teacher.name}}</span>
+            </td>
+              <td>
+            {% for area in teacher.area %}
+                <span class="teacher-area">{{area}}</span>
+            {% endfor %}
+              </td>
+            <td><a href="teachers/{{teacher.id}}">Ver</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a id= "buttom-new-teacher" href="/teachers/register">Novo</a>
   </main>
 {% endblock content %}

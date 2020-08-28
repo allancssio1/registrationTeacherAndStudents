@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 :root {
-  --color-green: #50fa7b;
+  --color-buttom-primary: #56ff80d2;
   --color-rocket: #7159c1;
+  --color-buttom-secondary: #50ab7f;
+  --color-delete-primary: rgb(252, 52, 52);
+  --color-delete-secondary: rgb(252,0,0);
 }
 
 * {
@@ -35,17 +38,18 @@ header {
 }
 .links a.active{
   font-weight: bold;
-  color: var(--color-green);
+  color: var(--color-buttom-primary);
 }
 .links a:hover{
-  color: var(--color-green);
+  font-weight: bold;
+  color: var(--color-buttom-secondary);
 }
 .links a::after{
   content: "";
   width: 0%;
   height: 2px;
   position: absolute;
-  background-color: var(--color-green);
+  background-color: var(--color-buttom-secondary);
   left: 0px;
   bottom: -2px;
 }
@@ -57,6 +61,7 @@ header {
 .card{
   font-family: 'Roboto', sans-serif;
   width: 800px;
+  min-height: 80vh;
   box-sizing: border-box;
   background-color: white;
   margin: 32px auto;
@@ -64,7 +69,75 @@ header {
   grid-template-columns: 2fr 3fr;
   box-shadow: 10px 10px 10px #494949;
   animation: up 400ms ease-in-out;
+  position: relative;
 }
+.table-container{
+  display: block;
+  box-sizing: border-box;
+  padding: 4px 16px;
+  border: 3px solid #666666;
+  border-radius: 8px;
+}
+.table-container table{
+  border-spacing: 0;
+}
+.table-container thead tr th{
+  text-align: left;  
+}
+th, td{
+  padding: 8px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.table-container thead th:last-child,
+tbody tr td:last-child{
+  text-align: center;
+}
+.table-container tbody tr td:first-child{
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 10px;
+  align-items : center;
+}
+.table-container tbody tr #image-teacher{
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 1px solid white;
+  box-shadow: 1px 1px 4px #777;
+}
+.table-container tbody tr td{
+  padding: 8px 0;
+}
+.table-container tbody tr:last-child td{
+  border-bottom: none;
+}
+tbody td:nth-child(2){
+  max-width: 300px;
+}
+tbody tr td:last-child a,
+.card a#buttom-new-teacher{
+  background: var(--color-buttom-primary);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+.card a#buttom-new-teacher{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+}
+tbody tr td:last-child a:hover,
+.card a#buttom-new-teacher:hover{
+  color: white;
+  background-color: var(--color-buttom-secondary);
+}
+
 .card .avatar{
   background-repeat: repeat-x;
   min-width: 100%;
@@ -73,7 +146,7 @@ header {
 }
 .card h3{
   font-weight: bold;
-  color: var(--color-green);
+  color: var(--color-buttom-primary);
   margin: 4px 8px;
 }
 .card .item{
@@ -104,7 +177,7 @@ header {
   font-weight: bold;
   display: inline-block;
   margin: 4px 0;
-  background-color: var(--color-green);
+  background-color: var(--color-buttom-primary);
   padding: 2px 4px;
   border-radius: 16px;
 }
@@ -122,7 +195,7 @@ header {
   font-weight: bold;
   display: inline-block;
   margin: 8px 16px;
-  background-color: var(--color-green);
+  background-color: var(--color-buttom-primary);
   padding: 2px 4px;
   border-radius: 16px;
 }
@@ -144,17 +217,19 @@ input::placeholder{
   font-weight: bold;
   color: #303030;
 }
-button[type='submit'], a.button{
+button[type='submit'],
+a.button,
+.table-container tbody tr span.teacher-area{
   margin: 8px 0;
   padding: 4px;
   line-height: 24px;
   border-radius: 16px;
-  background-color: var(--color-green);
+  background-color: var(--color-buttom-primary);
   font-weight: bold;
   width: 100%;
 }
 #form-delete button[type='submit']{
-  background-color: rgb(236, 100, 100);
+  background-color: var(--color-delete-primary);
 }
 a.button{
   box-sizing: border-box;

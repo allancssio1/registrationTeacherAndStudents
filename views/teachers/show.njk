@@ -8,37 +8,39 @@
       </article>
 
     <article class="details">
-      <div class="item">
-        <div>Avatar URL</div>
-        <input type="url" name="avatar_url" placeholder="{{teacher.avatar_url}}">
-      </div>
+
       <div class="item">
         <div>Nome Completo</div>
-        <input type="text" name="name" placeholder="{{teacher.name}}">
+        <div type="text" name="name">{{teacher.name}}</div>
       </div>
+      
       <div class="item">
         <div>Idade</div>
         <div>{{teacher.age}}</div>
       </div>
+      
       <div class="item">
+        
         <div>Grau de Escolaridade</div>
+        
         <div name="level">
           <p>{{teacher.level}}</p>
         </div>
+
       </div>
+      
       <div class="item">
+        
         <div>Tipo de aula</div>
-          <span>
-            <p>{{teacher.model}}</p>
-          </span>
-        </div>
-      </div>
+        
+        <span>
+          <p>{{teacher.model}}</p>
+        </span>
       <div class="item">
         <div>Desde</div>
-          <span>
-            <p>{{teacher.created_at}}</p>
-          </span>
-        </div>
+        <span>
+          <p>{{teacher.created_at}}</p>
+        </span>
       </div>
       <div class="item">
         <div>Area de Atuação</div>
