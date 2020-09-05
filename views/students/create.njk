@@ -1,0 +1,16 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <form class="card" method="post" action="/students">
+    <article
+      class="avatar"
+      style= "width: 100%; heigth: 100%; background: url(https://source.unsplash.com/collection/517198/500x500) no-repeat center center / cover"></article>
+
+    <article class="details">
+      <h3>Registrar Estudante</h3>
+
+      {% include 'students/field.njk' %}
+      
+    </article>
+  </form>
+{% endblock content %}

@@ -1,8 +1,7 @@
 const fs = require('fs')
-const data = require('./data.json')
-const { age, graduation, modalidad, date } = require('./utils')
+const data = require('../data.json')
+const { age, graduation, modalidad, date } = require('../utils')
 const Intl = require('intl')
-const { prototype } = require('stream')
 
 exports.index = function (req, res){
   let teachers = data.teachers.map((teacher) => {
@@ -12,6 +11,10 @@ exports.index = function (req, res){
     }
   })
   return res.render('teachers/index', { teachers })
+}
+
+exports.create = function (req, res) {
+  return res.render('teachers/create')
 }
 
 exports.post = function (req, res){
@@ -27,7 +30,17 @@ exports.post = function (req, res){
   
   birth = Date.parse(birth)
   const create_at = Date.now()
-  const id = Number(data.teachers.length + 1)
+  let id = 1
+  for (let i = 0; i< data.teachers.length; i++) {
+    data.teachers.map(function (element) {
+      if (element.id == id) {
+        id = id + 1
+        return id
+      }else {
+        return id
+      }
+    })
+  }
   
   data.teachers.push({
     id,
@@ -78,7 +91,7 @@ exports.edit = function (req,res) {
 
   const teacher = {
     ...foundTeacher,
-    birth: date(foundTeacher.birth),
+    birth: date(foundTeacher.birth).iso,
     area: foundTeacher.area.split(","),
     level: graduation(foundTeacher.level),
   }

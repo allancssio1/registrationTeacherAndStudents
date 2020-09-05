@@ -1,0 +1,46 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+<form class="card" method="post" action="/students">
+    <article 
+      class="avatar"
+      style= "background-image: url({{student.avatar_url}})">
+    </article>
+
+    <article class="details">
+
+      <div class="item">
+        <div>Nome Completo</div>
+        <div type="text">{{student.name}}</div>
+      </div>
+      
+      <div class="item">
+        <div>Idade</div>
+        <div>{{student.age}}</div>
+      </div>
+      
+      <div class="item">
+        <div>Idade</div>
+        <div>{{student.birth}}</div>
+      </div>
+
+      <div class="item">
+        <div>E-mail</div>
+        <div>{{student.email}}</div>
+      </div>
+
+      <div class="item">
+        <div>Grau de Escolaridade</div>
+        <div>
+        {{student.educationLevel}}
+        </div>
+      </div>
+      
+      <div class="item">
+        <div>Carga Horária</div>
+        <div>{{student.hourClass}}</div>
+      </div>
+      <a class="button" href="/students/{{student.id}}/edit">Editar</a>
+    </article>
+  </form>
+{% endblock content %}
