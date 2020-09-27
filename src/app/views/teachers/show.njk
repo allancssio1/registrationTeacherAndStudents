@@ -24,7 +24,7 @@
         <div>Grau de Escolaridade</div>
         
         <div name="level">
-          <p>{{teacher.level}}</p>
+          <p>{{teacher.education_level}}</p>
         </div>
 
       </div>
@@ -34,7 +34,7 @@
         <div>Tipo de aula</div>
         
         <span>
-          <p>{{teacher.model}}</p>
+          <p>{{teacher.class_type}}</p>
         </span>
       <div class="item">
         <div>Desde</div>
@@ -44,7 +44,7 @@
       </div>
       <div class="item">
         <div>Area de Atuação</div>
-        {% for area in teacher.area %}
+        {% for area in teacher.subject_taught %}
           <span>{{area}}</span>
         {% endfor %}
       </div>

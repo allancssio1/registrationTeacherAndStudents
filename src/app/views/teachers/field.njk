@@ -8,12 +8,12 @@
 </div>
 <div class="item">
   <div>Data de Nascimento</div>
-  <input type="date" name="birth" value="{{teacher.birth}}">
+  <input type="date" name="birth_date" value="{{teacher.birth_date}}">
 </div>
 <div class="item">
   <div>Grau de Escolaridade</div>
-  <select name="level">
-    <option disabled selected value="{{teacher.level}}">{{teacher.level}}</option>
+  <select name="education_level">
+    <option disabled selected value="{{teacher.education_level}}">{{teacher.education_level}}</option>
     <option value="medio" class="option">Ensino Médio Completo</option>
     <option value="superior" class="option">Ensino Superior Completo</option>
     <option value="master" class="option">Mestrado</option>
@@ -25,9 +25,9 @@
     <span>
       <input 
         type="radio"
-        name="model"
+        name="class_type"
         value="presential"
-        {% if teacher.model == 'presential' %}
+        {% if teacher.class_type == 'presential' %}
         checked
         {% endif %}>
           Presencial
@@ -35,9 +35,9 @@
     <span>
       <input 
         type="radio"
-        name="model"
+        name="class_type"
         value="distance"
-        {% if teacher.model == 'distance' %}
+        {% if teacher.class_type == 'distance' %}
         checked
         {% endif %}>
       Ensino a Distância
@@ -49,8 +49,8 @@
   </div>
   <input
     type="text"
-    name="area"
+    name="subject_taught"
     placeholder="ex: Matemática, Física"
-    value="{{teacher.area}}">
+    value="{{teacher.subject_taught}}">
 </div>
 <button type="submit">Salvar</button>

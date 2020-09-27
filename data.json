@@ -1,15 +1,6 @@
 {
   "students": [
     {
-      "id": 2,
-      "avatar_url": "https://instagram.ffor13-1.fna.fbcdn.net/v/t51.2885-19/s150x150/116471743_969730080116562_9170765629185657425_n.jpg?_nc_ht=instagram.ffor13-1.fna.fbcdn.net&_nc_ohc=MD7LUsZ4ODYAX8lNtKd&oh=e191461bf7c912d5835192b10adbe09e&oe=5F689926",
-      "name": "Ellen",
-      "birth": 558662400000,
-      "email": "elle@gmail.com",
-      "educationLevel": "3EM",
-      "hourClass": 10
-    },
-    {
       "id": 3,
       "avatar_url": "https://avatars0.githubusercontent.com/u/58371478?s=460&u=6a28aa264426f86bd89d8e9f792a786f749e40fb&v=4",
       "name": "Allan",
@@ -20,20 +11,11 @@
     },
     {
       "id": 1,
-      "avatar_url": "https://avatars0.githubusercontent.com/u/58371478?s=460&u=6a28aa264426f86bd89d8e9f792a786f749e40fb&v=4",
-      "name": "allannn",
-      "birth": 1215388800000,
-      "email": "allan.cassio1@gmail.com",
-      "educationLevel": "5EF",
-      "hourClass": 6
-    },
-    {
-      "id": 4,
-      "avatar_url": "https://avatars0.githubusercontent.com/u/58371478?s=460&u=6a28aa264426f86bd89d8e9f792a786f749e40fb&v=4",
-      "name": "gelid",
-      "birth": 1336003200000,
-      "email": "allan.cassio1@gmail.com",
-      "educationLevel": "6EF",
+      "avatar_url": "https://instagram.ffor13-1.fna.fbcdn.net/v/t51.2885-19/s150x150/116471743_969730080116562_9170765629185657425_n.jpg?_nc_ht=instagram.ffor13-1.fna.fbcdn.net&_nc_ohc=MD7LUsZ4ODYAX8lNtKd&oh=e191461bf7c912d5835192b10adbe09e&oe=5F689926",
+      "name": "ellen",
+      "birth": 558662400000,
+      "email": "elle@gmail.com",
+      "educationLevel": "3EM",
       "hourClass": 10
     }
   ],
@@ -49,16 +31,6 @@
       "model": "presential"
     },
     {
-      "id": 1,
-      "avatar_url": "https://avatars0.githubusercontent.com/u/58371478?s=460&u=6a28aa264426f86bd89d8e9f792a786f749e40fb&v=4",
-      "name": "Allan Cássio",
-      "birth": 1207699200000,
-      "create_at": 1599205937072,
-      "level": "superior",
-      "area": "portugues",
-      "model": "presential"
-    },
-    {
       "id": 7,
       "avatar_url": "https://instagram.ffor13-1.fna.fbcdn.net/v/t51.2885-19/s150x150/116471743_969730080116562_9170765629185657425_n.jpg?_nc_ht=instagram.ffor13-1.fna.fbcdn.net&_nc_ohc=MD7LUsZ4ODYAX8lNtKd&oh=e191461bf7c912d5835192b10adbe09e&oe=5F689926",
       "name": "Ellen",
@@ -66,6 +38,16 @@
       "create_at": 1599206582518,
       "level": "doctor",
       "area": "História",
+      "model": "distance"
+    },
+    {
+      "id": 1,
+      "avatar_url": "https://avatars0.githubusercontent.com/u/58371478?s=460&u=6a28aa264426f86bd89d8e9f792a786f749e40fb&v=4",
+      "name": "Allan",
+      "birth": 664848000000,
+      "create_at": 1599942362021,
+      "level": "superior",
+      "area": "portugues",
       "model": "distance"
     }
   ]
