@@ -12,14 +12,13 @@ module.exports= {
     return age
   },
   graduation: function (element) {
-    
-    if (element == "medio"){
-      return "Ensino Médio Completo"
-    }else if (element == "superior") {
-      return "Ensino Superior Completo"
-    }else if (element == "doctor") {
-      return "Doutorado"
-    }else { return "Mestrado"}
+    switch (element) {
+      case 'medio': return 'Ensino Médio Completo';
+      case 'superior': return 'Ensino Superior Completo';
+      case 'doctor': return 'Doutorado';
+      case 'master': return 'Mestrado';
+      default: break;
+    }
   },
   modalidad: function (element) {
     if (element == "presential") {
@@ -53,8 +52,7 @@ module.exports= {
       case '1EM': return '1° Ano do Médio';
       case '2EM': return '2° Ano do Médio';
       case '3EM': return '3° Ano do Médio';
-      default:
-        break;
+      default: break;
     }
   }
 }

@@ -42,7 +42,6 @@ module.exports = {
       if (!teacher) return res.send ('Teacher not found')
 
       teacher.birth_date = date(teacher.birth_date).iso
-      teacher.education_level = graduation(teacher.education_level)
       return res.render ('teachers/edit', { teacher })
     })
   },
