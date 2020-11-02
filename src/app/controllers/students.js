@@ -14,7 +14,9 @@ module.exports = {
   
   },
   create (req, res) {
-    return res.render('students/create')
+    Student.teacherSelectOption(function (options) {
+      return res.render('students/create', {teachersOptions: options})
+    })
   },
   post (req, res) {
     const keys = Object.keys(req.body)
@@ -40,7 +42,10 @@ module.exports = {
     Student.find(req.params.id, function (student) {
       if (!student) return res.send ('Studnet not found')
       student.birth = date(student.birth).iso
-      return res.render('students/edit', { student })
+      Student.teacherSelectOption (function (options) {
+
+        return res.render('students/edit', { student, teachersOptions: options })
+      })
     })
   },
   put (req, res) {

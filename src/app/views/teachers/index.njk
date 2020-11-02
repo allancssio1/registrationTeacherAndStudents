@@ -2,7 +2,13 @@
 
 {% block content %}
   <main class="card table-container">
-    <a id= "buttom-new-id" href="/teachers/create">Novo</a>
+    <div class="header">
+      <a id= "buttom-new-id" href="/teachers/create">Novo</a>
+      <form action="/teachers" method="get">
+        <input type="text" name="filter"  value="{{filter}}" placehouder="Nome ou matéria">
+        <button type="submit">Filtrar</button>
+      </form>
+    </div>
     <table width="100%">
       
       <thead>

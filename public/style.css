@@ -114,9 +114,6 @@ tbody tr td:last-child{
 .table-container tbody tr:last-child td{
   border-bottom: none;
 }
-/* tbody td:nth-child(2){
-  max-width: 300px;
-} */
 
 tbody tr td:last-child a,
 .card a#buttom-new-id{
@@ -126,11 +123,6 @@ tbody tr td:last-child a,
   font-weight: bold;
   color: black;
   text-decoration: none;
-}
-.card a#buttom-new-id{
-  display: inline-block;
-  margin-bottom: 16px;
-  justify-content: center;
 }
 tbody tr td:last-child a:hover,
 .card a#buttom-new-id:hover{
@@ -219,11 +211,12 @@ input::placeholder{
 }
 button[type='submit'],
 a.button,
-.table-container tbody tr span.area{
+.table-container tbody tr span.area,
+.table-container .header a#buttom-new-id{
   margin: 8px 0;
   padding: 4px;
   line-height: 24px;
-  border-radius: 16px;
+  border-radius: 12px;
   background-color: var(--color-buttom-primary);
   font-weight: bold;
   width: 100%;
@@ -236,6 +229,36 @@ a.button{
   display: block;
   text-decoration: none;
   text-align: center;
+}
+
+/*FILTER*/
+.table-container .header {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+.table-container .header a#buttom-new-id{
+  display: flex;
+  justify-content: center;
+
+}
+.table-container .header form{
+  box-sizing: border-box;
+  display: grid;
+  column-gap: 16px;
+  grid-template-columns: 1fr 128px;
+}
+.table-container .header form input{
+  height: 24px;
+  border: 1px solid #616161;
+  border-radius: 4px;
+  padding: 4px;
+}
+.table-container .header a#buttom-new-id,
+.table-container .header form button{
+  margin-top: 0;
+  width: 120px;
 }
 
 @keyframes up{
