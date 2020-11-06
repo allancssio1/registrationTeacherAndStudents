@@ -10,9 +10,7 @@
       </form>
     </div>
     <table width="100%">
-      
       <thead>
-        
         <tr>
           <th>Nome Completo</th>
           <th>Área de Atuação</th>
@@ -36,5 +34,10 @@
         {% endfor %}
       </tbody>
     </table>
+    <div class="pagination"
+      data-filter="{{filter}}"
+      data-page="{{pagination.page}}"
+      data-total="{{pagination.total}}">
+    </div>
   </main>
 {% endblock content %}

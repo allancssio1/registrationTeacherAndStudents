@@ -5,6 +5,7 @@
   --color-buttom-secondary: rgb(250, 150, 150);
   --color-delete-primary: rgb(250, 100, 100);
   --color-delete-secondary: rgb(250,0,0);
+  --color-pagination-primary: rgb(80, 80, 80);
 }
 
 * {
@@ -61,7 +62,7 @@ header {
 .card{
   font-family: 'Roboto', sans-serif;
   max-width: 800px;
-  max-height: 800px;
+  min-height: 300px;
   box-sizing: border-box;
   background-color: white;
   margin: 32px auto;
@@ -72,7 +73,6 @@ header {
   position: relative;
 }
 .table-container{
-  min-height: 500px;
   display: block;
   box-sizing: border-box;
   padding: 36px;
@@ -259,6 +259,27 @@ a.button{
 .table-container .header form button{
   margin-top: 0;
   width: 120px;
+}
+/* PAGINATION */
+.card{
+  display: grid;
+  grid-template: 32px 1fr 24px /1fr ;
+  row-gap: 24px;
+}
+.card .pagination{
+  align-self: center;
+  justify-self: center;
+}
+.pagination a,
+.pagination span{
+  margin: 0px 8px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--color-pagination-primary);
+}
+.pagination a:hover{
+  font-weight: bold;
+  color: var(--color-buttom-primary);
 }
 
 @keyframes up{
