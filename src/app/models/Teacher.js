@@ -107,20 +107,20 @@ module.exports = {
     const {filter, limit, offset, callback} = params
     let query = "",
       filterQuery = "",
-      totalQuery = `(SELECT count(*) FROM teachers) AS total`
+      totalQuery = `(
+        SELECT count(*) FROM teachers
+        ) AS total`
 
     if (filter) {
       filterQuery = `
-      WHERE teachers.name ILIKE '%${filter}%'
-      OR teachers.subject_taught ILIKE '%${filter}%'`
+        WHERE teachers.name ILIKE '%${filter}%'`
       totalQuery = `(
-        SELECT count(*) FROM teachers
-        ${filterQuery}
+        SELECT count(*)
+        FROM teachers ${filterQuery}
         ) AS total`
     }
     query = `
-      SELECT teachers.*,
-      ${totalQuery},
+      SELECT teachers.*, ${totalQuery},
       count(students) AS total_students
       FROM teachers
       LEFT JOIN students ON (teachers.id = students.teacher_id)
@@ -131,6 +131,7 @@ module.exports = {
       function (err, results) {
         if (err) throw `Database ${err}`
         callback(results.rows)
-      })
+      }
+    )
   }
 }
